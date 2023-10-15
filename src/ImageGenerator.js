@@ -6,7 +6,7 @@ function ImageGenerator({ sentiment }) {
   const [prompt, setPrompt] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
-  const API_KEY = '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';
+  const API_KEY = 'key';
 
   const openai = new OpenAI({
     apiKey: API_KEY,

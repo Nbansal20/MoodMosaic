@@ -43,8 +43,9 @@ function App() {
     return (
         <div className="App">
             <Header/>
+            <div>
             <div className = "head-image">
-          <img src = {require ('./preview16.jpeg')} alt = "Freedom Blog" />
+          <img style={{height:'850px'}}src = {require ('./Nb.png')} alt = "Freedom Blog" />
         </div>
           <header className="App-header">
             {/* <h2 style={{color: "black"}}> Sentiment Analysis Application</h2> */}
@@ -63,6 +64,7 @@ function App() {
               <Speech/>
             </div>
           </header>
+          </div>
         </div>
       );
     }
