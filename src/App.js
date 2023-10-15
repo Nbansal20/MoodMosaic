@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from 'react';
 import ImageGenerator from './ImageGenerator.js';
+import Header from './Header';
 
 function App() {
     const [message, setMessage] = useState("");
@@ -40,8 +41,12 @@ function App() {
     };
     return (
         <div className="App">
+            <Header/>
+            <div className = "head-image">
+          <img src = {require ('./preview16.jpeg')} alt = "Freedom Blog" />
+        </div>
           <header className="App-header">
-            <h2> Sentiment Analysis Application</h2>
+            {/* <h2 style={{color: "black"}}> Sentiment Analysis Application</h2> */}
             <div className="input">
             <input 
       className="prompt"
