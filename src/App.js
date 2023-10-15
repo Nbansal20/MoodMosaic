@@ -6,10 +6,13 @@ import Speech from './Speech';
 
 function App() {
   const [message, setMessage] = useState("");
+  const setMessageInApp = (newMessage) => {
+    setMessage(newMessage);
+  };
   const [sentiment, setSentiment] = useState("");
   const [showForm, setShowForm] = useState(true);
   const [generatingImage, setGeneratingImage] = useState(false);
-  const API_KEY = 'key';
+  const API_KEY = 'skeyyyyyyy';
 
   const [prompt, setPrompt] = useState("");
   const APIBODY = {
@@ -72,7 +75,7 @@ function App() {
           {!showForm && generatingImage && (
             <p>Generating Your Mood Mosaic...</p>
           )}
-          <Speech />
+          <Speech setMessageInApp={setMessageInApp} />
         </div>
       </header>
     </div>
