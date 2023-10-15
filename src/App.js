@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import ImageGenerator from './ImageGenerator.js';
 import Header from './Header';
 import Speech from './Speech';
+import {BsFillMicFill } from 'react-icons/bs';
+import {BiReset} from 'react-icons/bi';
+import {BsFillStopCircleFill} from 'react-icons/bs';
 
 function App() {
   const [message, setMessage] = useState("");
@@ -12,7 +15,7 @@ function App() {
   const [sentiment, setSentiment] = useState("");
   const [showForm, setShowForm] = useState(true);
   const [generatingImage, setGeneratingImage] = useState(false);
-  const API_KEY = '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';
+  const API_KEY = 'key';
 
   const [prompt, setPrompt] = useState("");
   const APIBODY = {
@@ -49,11 +52,18 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="head-image">
+      <div className="head-text">
+        <div className = "head-image">
         <img src={require('./Nb.png')} style={{height:'850px'}} alt="Freedom Blog" />
-      </div>
-      <header className="App-header">
-        <div className="input">
+        </div>
+        <div class='text-on-image'> 
+        <div>
+        <Speech setMessageInApp={setMessageInApp} />
+        </div>
+       </div> 
+       </div>
+      {/* <header className="App-header"> */}
+        {/* <div className="input">
           {showForm && (
             <input
               className="prompt"
@@ -62,8 +72,9 @@ function App() {
               onChange={(e) => setPrompt(e.target.value)}
             />
           )}
-        </div>
-        <div className="Response">
+        </div> */}
+       
+        {/* <div className="Response">
           {showForm && (
             <button onClick={handleClick}>Get Message sentiment</button>
           )}
@@ -75,9 +86,8 @@ function App() {
           {!showForm && generatingImage && (
             <p>Generating Your Mood Mosaic...</p>
           )}
-          <Speech setMessageInApp={setMessageInApp} />
-        </div>
-      </header>
+        </div> */}
+      {/* </header> */}
     </div>
   );
 }

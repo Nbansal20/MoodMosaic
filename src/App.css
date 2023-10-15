@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  background-color: #E6F4F5;
+  /* background-color: #E6F4F5; */
+  background-image: url(./124.jpg);
+  background-size: 150px;
 }
 
 .App-logo {
@@ -15,8 +17,9 @@
 }
 
 .App-header {
-  background-color: #E6F4F5;
-  min-height: 100vh;
+  /* background-color: #E6F4F5; */
+  background-image: url(./xyz.jpg);
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,4 +47,10 @@
 
 .head-text {
   position: relative;
+}
+.text-on-image {
+ position: absolute;
+ right: 50%;
+ left: 50%;
+ bottom: 15%;
 }

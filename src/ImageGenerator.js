@@ -2,11 +2,12 @@ import './App.css';
 import { useState, useEffect } from "react";
 import OpenAI from "openai";
 
-function ImageGenerator({ sentiment }) {
-  const [prompt, setPrompt] = useState("");
+
+function ImageGenerator({ sentiment,prompt }) {
+  const [prompt1, setPrompt] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
-  const API_KEY = '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';
+  const API_KEY = 'key';
 
   const openai = new OpenAI({
     apiKey: API_KEY,
