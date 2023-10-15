@@ -6,7 +6,7 @@ function App() {
     const [message, setMessage] = useState("");
     const [sentiment, setSentiment] = useState("");
     //const API_KEY = process.env.REACT_APP_OPEN_AI_API_KEY;
-    const API_KEY = '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'
+    const API_KEY = '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'
 
     const [prompt, setPrompt] = useState("");
     const APIBODY ={
