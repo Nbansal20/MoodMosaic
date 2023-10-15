@@ -9,7 +9,7 @@ function App() {
   const [sentiment, setSentiment] = useState("");
   const [showForm, setShowForm] = useState(true);
   const [generatingImage, setGeneratingImage] = useState(false);
-  const API_KEY = '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';
+  const API_KEY = 'key';
 
   const [prompt, setPrompt] = useState("");
   const APIBODY = {
