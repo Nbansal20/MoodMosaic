@@ -6,7 +6,7 @@ function App() {
     const [message, setMessage] = useState("");
     const [sentiment, setSentiment] = useState("");
     //const API_KEY = process.env.REACT_APP_OPEN_AI_API_KEY;
-    const API_KEY = 'key'
+    const API_KEY = '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'
 
     const [prompt, setPrompt] = useState("");
     const APIBODY ={
@@ -49,21 +49,10 @@ function App() {
        placeholder="Enter prompt..."
        onChange={(e) => setPrompt(e.target.value)}
   />
-              <p> Enter the message to classify </p>
-    
-              <textarea
-                className="textArea" 
-                type="text" 
-                placeholder="Type your message..."
-                cols={50}
-                rows={10}
-                onChange={(e) => setMessage(e.target.value)}
-              />
             </div>
     
             <div className="Response">
               <button onClick={handleClick}> Get Message sentiment</button>
-              {sentiment !== "" ? <p> The message is {sentiment} </p> : null}
               <ImageGenerator sentiment={sentiment} />
             </div>
           </header>
