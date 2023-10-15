@@ -2,6 +2,7 @@ import './App.css';
 import React, {useState} from 'react';
 import ImageGenerator from './ImageGenerator.js';
 import Header from './Header';
+import Speech from './Speech';
 
 function App() {
     const [message, setMessage] = useState("");
@@ -59,6 +60,7 @@ function App() {
             <div className="Response">
               <button onClick={handleClick}> Get Message sentiment</button>
               <ImageGenerator sentiment={sentiment} />
+              <Speech/>
             </div>
           </header>
         </div>
