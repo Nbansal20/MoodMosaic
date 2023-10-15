@@ -1,10 +1,12 @@
 import './App.css';
 import React, {useState} from 'react';
+import ImageGenerator from './ImageGenerator.js';
+
 function App() {
     const [message, setMessage] = useState("");
     const [sentiment, setSentiment] = useState("");
-    // const API_KEY = process.env.REACT_APP_OPEN_AI_API_KEY;
-    const API_KEY = key
+    //const API_KEY = process.env.REACT_APP_OPEN_AI_API_KEY;
+    const API_KEY = 'key'
 
     const [prompt, setPrompt] = useState("");
     const APIBODY ={
@@ -62,6 +64,7 @@ function App() {
             <div className="Response">
               <button onClick={handleClick}> Get Message sentiment</button>
               {sentiment !== "" ? <p> The message is {sentiment} </p> : null}
+              <ImageGenerator sentiment={sentiment} />
             </div>
           </header>
         </div>
