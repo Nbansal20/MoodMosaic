@@ -6,7 +6,7 @@ function ImageGenerator({ sentiment }) {
   const [prompt, setPrompt] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
-  const API_KEY = 'sk-hehe';
+  const API_KEY = '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';
 
   const openai = new OpenAI({
     apiKey: API_KEY,
@@ -57,14 +57,19 @@ function ImageGenerator({ sentiment }) {
     <div className="container">
       {loading ? (
         <>
+        {<p>Loading your mood board.....</p>}
         </>
       ) : (
         <>
 
           {result.length > 0 ? (
+            <div>
             <img className="result-image" src={result} alt="result" />
+            <p className="prompt-text">{prompt}</p>
+          </div>
           ) : (
             <>
+            {<p>I can't find an image at the moment, I need to learn more, sorry about that!</p>}
             </>
           )}
         </>

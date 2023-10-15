@@ -12,7 +12,7 @@ function App() {
   const [sentiment, setSentiment] = useState("");
   const [showForm, setShowForm] = useState(true);
   const [generatingImage, setGeneratingImage] = useState(false);
-  const API_KEY = 'skeyyyyyyy';
+  const API_KEY = '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';
 
   const [prompt, setPrompt] = useState("");
   const APIBODY = {
@@ -50,7 +50,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="head-image">
-        <img src={require('./preview16.jpeg')} alt="Freedom Blog" />
+        <img src={require('./Nb.png')} style={{height:'850px'}} alt="Freedom Blog" />
       </div>
       <header className="App-header">
         <div className="input">
@@ -69,7 +69,7 @@ function App() {
           )}
           {!showForm && !generatingImage && (
             <>
-              <ImageGenerator sentiment={sentiment} />
+              <ImageGenerator sentiment={sentiment} prompt={prompt}/>
             </>
           )}
           {!showForm && generatingImage && (
